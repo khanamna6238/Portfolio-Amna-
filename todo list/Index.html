@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyTodo List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #e3e7ec;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 550px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card h1 {
+      text-align: center;
+      font-size: 28px;
+      padding: 25px 20px 15px;
+      color: #111;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 10px;
+      padding: 0 20px 20px;
+    }
+
+    .input-row input {
+      flex: 1;
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: not-allowed;
+    }
+
+    .input-row button {
+      background-color: #1976d2;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: not-allowed;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .empty-box {
+      background-color: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+      min-height: 280px;
+      text-align: center;
+    }
+
+    .empty-box img {
+      width: 90px;
+      opacity: 0.6;
+      margin-bottom: 15px;
+    }
+
+    .empty-box p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: white;
+      border-top: 1px solid #eee;
+    }
+
+    .footer span {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .footer button {
+      background-color: #e53935;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: not-allowed;
+    }
+
+    @media (max-width: 600px) {
+      .input-row {
+        flex-direction: column;
+      }
+
+      .input-row button {
+        width: 100%;
+      }
+
+      .footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .footer button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>MyTodo List</h1>
+
+    <div class="input-row">
+      <input type="text" placeholder="Enter a task" disabled />
+      <button disabled>ADD</button>
+    </div>
+
+    <div class="empty-box">
+      <!-- ✅ This image matches your screenshot style -->
+      <img src="https://cdn-icons-png.flaticon.com/512/6134/6134065.png" alt="Empty ToDo Icon">
+      <p>Empty Todo List</p>
+    </div>
+
+    <div class="footer">
+      <span>Total Tasks: 0</span>
+      <button disabled>DELETE ALL</button>
+    </div>
+  </div>
+</body>
+</html>

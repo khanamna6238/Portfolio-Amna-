@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e5e9f2;
+  display: flex;
+  justify-content: center;
+  padding: 30px 15px;
+}
+
+.todo-container {
+  background-color: white;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  cursor: text;
+}
+
+.input-section .add-btn {
+  padding: 12px 20px;
+  background-color: #167dff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.input-section .add-btn:hover {
+  background-color: #0a63cc;
+}
+
+.todo-list {
+  background-color: #f1f3f6;
+  height: 250px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state {
+  text-align: center;
+  color: #999;
+}
+
+.empty-state i {
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: #c5c5c5;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  background: white;
+  padding: 15px;
+  border-top: 1px solid #eee;
+  border-radius: 0 0 10px 10px;
+}
+
+.footer span {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer .delete-btn {
+  background-color: #e53935;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer .delete-btn:hover {
+  background-color: #c62828;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .input-section {
+    flex-direction: column;
+  }
+
+  .input-section .add-btn {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer span {
+    text-align: center;
+  }
+}
